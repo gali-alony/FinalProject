@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            color: #333;
+            font-size: 32 px;
+        }
+        a {
+            color: #FA0277;
+        }
+    </style>
+    <title>Time Zone</title>
+
+
+</head>
+<body>
+
+    <h1>What's the status in...</h1>
+<form action="/results" method="post">
+    <h4>
+        What city would you like to know about?
+    </h4>
+        <p>
+            City or Town (i.e Seattle)
+            <br>
+            <input type="text" id="city" name="city">
+        </p>
+
+        <p>
+    <h4>
+        What location-related news articles would you like to view?
+    </h4>
+            Key Word (i.e business, war, etc.)
+            <br>
+            <input type="text" id="keyword" name="keyword">
+        </p>
+        <p>
+            <br>
+            <input type="submit" id="submit" value="Submit">
+        </p>
+    </form>
+</body>
+</html>

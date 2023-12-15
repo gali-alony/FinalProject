@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+            font-size: 36px;
+        }
+        a {
+            color: #FH678s;
+        }
+        h3 {
+            font-size: 24px
+            color: #333
+        }
+        h2 {
+            font-size: 20px
+            color: #333
+        }
+    </style>
+    <title>results</title>
+</head>
+<body>
+    <h1>Status in {{ city }}</h1>
+    <h2>
+        {{time}}
+        <br>
+        {{date}}
+    </h2>
+    <h3>
+      Top News Results for {{ city }} with keyword "{{keyword}}"
+    </h3>
+    {% if result and 'articles' in result %}
+        <ul>
+            {% for article in result['articles'] %}
+                <div>
+                    <li>
+                        <a href="{{ article.url }}" target="_blank">{{ article.title }}</a>
+                        <p>{{ article['content']|truncate(150) }}</p>
+                    </li>
+
+                </div>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <div class="alert alert-primary" role="alert">No results found for this search term</div>
+    {% endif %}
+</body>
+</html>
